@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "trinigame-12007",
+  "private_key_id": "b794a12b8056dbd9c367b496a6df67085a7013e9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+rKnhd+XdM7N9\nH9cQY1GRafppklQzz8OtdvhZKkFcIeeFWgcyXiJ36N09vn7C5dFmloypoYYfbeBc\nzr5TVCEHoUyz8cURth5diwbIUtAcXTw/nsvIztyYpU8CqgyxZmlVduubl8ak/5gD\nGb2LarE2G2BScZL9x7LVqgeN0zRk1zMaYgHu0HxO0fy6MImq9yd1pbQuohP5yp2/\nNRg4qJJXqaRARxiLXPmudBI1HCMV4Ek29ft6L6q1/DBS740X4fuR3Jr+wbsao/Co\n/w40/Ma8ZuRM2WZdnAjMvXIjZ+xNp0Z1BPsfff5ZewIsxGqcYgJZjOuwri2wfMVP\nDX2tEyc5AgMBAAECggEAFyou8V95o6gWVEs7+5e1Xy865vyKEklZgoeDoIGLsz/D\nOuY3HZ1mHp9B0bCFAfSdvhLoP+uJuePFcEEFymXcJWspQGtM/9vaUI8FYez9r5R8\nL1aBd4H6NulOcgpqxFqmzWVHNn33+i+7LhVAe+GYafRlfV6i9wX96gtgI5DXOrDc\nUThG01Xko3mwhS5T89ndlnsCqMDFwXE5VlIN96QoLaE647t4rFCpg5jxeZqXimb7\ntf0BVcwEb7fb6v6tGMtx7qya1rBqC0snDjK0kjFSjt9agvXNy72Hd3qJaoZ8ditF\niH8vLJofZXOjirTjrG6a2nvlNa0fayxV9o/1e3b4IQKBgQD3xbcYxrdBqyXqQ0KZ\nWsSOyYIbF/27gfen3za3U4uvTZj9NG9hvDaLB6ABFmpaq204x+Gz0sv0e+JkwEIW\no5b9yqtLmmDy/svRIu+jnWMwMo+VV0OE95kLdYGfAERT6JUCjYg+VcOcW0rENkGP\nVc4HqHe91plwsWZ7QWQ4EB1HPQKBgQDFAZDdmBh1TmSAE8620YWRhfyXnfV7kmo/\nAUJXEOaebqhljWgRGdSDOJgZhr0QV3ZniVtsaSmi8Z54E7gy4uGByxkVJ3DFKP0F\n83OUXKKhh0WMO3mwu+GThqBvG67I7KLE6I6wcr7R5el5XryGvGBt5F/Y+4JYBwEp\nGZ/hw+o/rQKBgHc4DUfApgDVByNXRb5gbF+AGjhLLO2CNdXyk3NWocmx/sEm78kJ\nNP1kp9qeHIKQJbfChZlu/nAfA+oSkDowcMChOhbgq3GApDV3J/OEEWvpiCkFmhlq\nwZs/6STGjhoJuVlHHJ1RyxN64djTemwrjz0kFKmljqMo2PTJnB1Vs6DJAoGAR9UC\nVUoX4O3shyaxwMc0xJLuPvpBgAUq6D41SjnHXQ1MKXsd7t5UNmR0URpn5YV+jtHu\nm+DcZaVj+rR1/Vfskb7ULnprC/ieCYVzJy1/vxXrre4huOdIoNn9tYWKfYiK8PE6\n1euA2FfUgYShiR82qdsTd7J9HEuxiKLnQRKGXyECgYEA4+b292CJS/55Ndkvbawu\nC6jiVsa7V/WEGS2Mye2a3w9eXGe9paZokO8U//yVRImA8VymMo1y1zAL3mrFZkIF\n4U84SP2oT5FGYKxzXqie5bLKpRzDP1rfnmmzZ8VcJg+TsLNeV/aFTTgR6WxK3Apb\n5+oeXOGz7vlSfWL2H+1j4ng=\n-----END PRIVATE KEY-----\n",
+  "client_email": "trinigame-12007@appspot.gserviceaccount.com",
+  "client_id": "107748850574660807069",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/trinigame-12007%40appspot.gserviceaccount.com"
+}
