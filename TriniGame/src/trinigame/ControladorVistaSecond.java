@@ -34,6 +34,7 @@ public class ControladorVistaSecond implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         try {
+            log.guardarIdUsuario(Integer.valueOf(vistaSecond.getUserId()));
              response = log.comprobarExisteUsuario( Integer.parseInt(vistaSecond.getUserId()));
         } catch (IOException ex) {
           
@@ -43,11 +44,12 @@ public class ControladorVistaSecond implements ActionListener {
         
         if(response){
             System.out.println(vistaSecond.getUserId());
-            System.out.println("Hola");
-            //vista.setVistaThird();
+            try {
+                vista.setVistaThird();
+            } catch (IOException ex) {} catch (ParseException ex) {}
         }else{
             System.out.println(vistaSecond.getUserId());
-            System.out.println("No te conozco");
+            System.out.println("Usuario desconocido");
         }
     }
     

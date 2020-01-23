@@ -5,9 +5,11 @@
  */
 package trinigame;
 
+import java.io.IOException;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import org.json.simple.parser.ParseException;
 import static trinigame.Vista.ANCHO_VENTANA;
 import static trinigame.Vista.LARGO_VENTANA;
 
@@ -18,12 +20,14 @@ import static trinigame.Vista.LARGO_VENTANA;
 public class VistaThird extends JPanel {
     
     Vista vista;
+    ControladorTimerVistaThird controladorTimerVistaThird;
     
     ControladorVistaThird controladorVistaThird;
     
-    public VistaThird(Vista vista) {
+    public VistaThird(Vista vista) throws IOException, ParseException {
         this.vista = vista;
-        controladorVistaThird = new ControladorVistaThird(this);
+        controladorVistaThird = new ControladorVistaThird(this, vista);
+        controladorTimerVistaThird = new ControladorTimerVistaThird(vista);
         
         setVistaThird();
     }
@@ -43,6 +47,7 @@ public class VistaThird extends JPanel {
         panelInferior.setBounds(0, 300, ANCHO_VENTANA, 200);
         JLabel etiquetaPreparado = new JLabel("¿Preparado para jugar?");
         JRadioButton radioButtonPreparado = new JRadioButton();
+        radioButtonPreparado.addActionListener(controladorVistaThird);
         panelInferior.add(etiquetaPreparado);
         panelInferior.add(radioButtonPreparado);
         

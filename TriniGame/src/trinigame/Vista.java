@@ -24,17 +24,20 @@ import org.json.simple.parser.ParseException;
  */
 public class Vista extends Frame {
     
+    
+    
     public static final int ANCHO_VENTANA = 400;
     public static final int LARGO_VENTANA = 600;
     
     ControladorVistaMain controladorVistaMain;
     
-    Timer timer;
-    VistaMain vistaMain;
-    VistaSecond vistaSecond;
-    VistaThird vistaThird;
+    private Timer timer;
+    private VistaMain vistaMain;
+    private VistaSecond vistaSecond;
+    private VistaThird vistaThird;
+    private VistaFourth vistaFourth;
     
-    public Vista() {
+    public Vista() throws IOException, ParseException {
         setVistaMain();
         //setVistaSecond();
         //setVistaThird();
@@ -52,6 +55,7 @@ public class Vista extends Frame {
     public void setVistaMain() {
         vistaMain = new VistaMain(this);
         this.add(vistaMain);
+        vistaMain.empezarControlador();
     }
     
     public void setVistaSecond() throws IOException, ParseException {
@@ -63,7 +67,7 @@ public class Vista extends Frame {
         this.setSize(ANCHO_VENTANA, LARGO_VENTANA);
     }
     
-    public void setVistaThird() {
+    public void setVistaThird() throws IOException, ParseException {
         this.removeAll();
         
         vistaThird = new VistaThird(this);
@@ -73,6 +77,20 @@ public class Vista extends Frame {
         this.setSize(ANCHO_VENTANA, LARGO_VENTANA);
     }
     
+    public void setVistaFourth() {
+       
+        
+        this.removeAll();
+        
+        vistaFourth = new VistaFourth(this);
+        this.add(vistaFourth);
+        
+        this.setSize(ANCHO_VENTANA + 1, LARGO_VENTANA + 1);
+        this.setSize(ANCHO_VENTANA, LARGO_VENTANA);
+       
+    }
+    
+    
     public void cerrarVentana() {
         this.addWindowListener(new WindowAdapter(){
             @Override
@@ -81,5 +99,11 @@ public class Vista extends Frame {
             }
         });
     }
+    
+    
+    public VistaMain getVistaMain() {
+        return vistaMain;
+    }
+    
     
 }

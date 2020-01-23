@@ -7,42 +7,55 @@ package trinigame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Timer;
-
-/**
- *
- * @author Jorge
- */
-public class ControladorVistaMain implements ActionListener {
+import org.json.simple.parser.ParseException;
+public class ControladorVistaMain {
     
     Vista vista;
     
     Timer timer;
     
-    int contador = 1;
+    int numeroActual=0;;
+    
     
     public ControladorVistaMain(Vista vista) {
         this.vista = vista;
     }
     
     public void iniciarContadorVistaMain() {
-        timer = new Timer(650, this);
-        timer.setRepeats(true);
+        timer = new Timer(30,new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    if (numeroActual <= 100) {
+                        numeroActual++;
+                        vista.getVistaMain().cambiarPosicionBarra(numeroActual); 
+                     }
+                    else{
+                        detenerContadorVistaMain();
+                    }
+               } 
+            }); 
+        //timer.setRepeats(true);
         timer.start();
     }
     
     public void detenerContadorVistaMain() {
         timer.stop();
+        CambiarVista();
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (contador == 0){
-           vista.setVistaSecond();
-           detenerContadorVistaMain();
-        } else {
-            contador--;
-        }
+    public void CambiarVista() {
+            try {
+                vista.setVistaSecond();
+            } catch (IOException ex) {
+                Logger.getLogger(ControladorVistaMain.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParseException ex) {
+                Logger.getLogger(ControladorVistaMain.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
     }
-    
 }
+    

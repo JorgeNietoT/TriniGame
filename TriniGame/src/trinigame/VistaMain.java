@@ -7,6 +7,8 @@ package trinigame;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+import javax.swing.SwingConstants;
 
 /**
  *
@@ -16,6 +18,8 @@ public class VistaMain extends JPanel {
     
     Vista vista;
     ControladorVistaMain controladorVistaMain;
+    JProgressBar barraCarga;
+    int numeroActual=0;
     
     public VistaMain(Vista vista) {
         this.vista = vista;
@@ -34,6 +38,20 @@ public class VistaMain extends JPanel {
         JLabel logotipo = new JLabel("TriniGame");
         panelCentral.add(logotipo);
         
+        //barra carga
+        
+        
+        JPanel parteBarraCarga = new JPanel();
+        parteBarraCarga.setBounds(0, 350, Vista.ANCHO_VENTANA, 50);
+        
+        barraCarga=new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
+        barraCarga.setValue(0);
+        barraCarga.setStringPainted(true);
+        
+        parteBarraCarga.add(barraCarga);
+        
+       
+        
         //Panel Inferior boton siguiente y cargando:
         JPanel panelInferior = new JPanel();
         panelInferior.setBounds(0, 522, Vista.ANCHO_VENTANA, 50);
@@ -42,8 +60,16 @@ public class VistaMain extends JPanel {
         
         this.add(panelCentral);
         this.add(panelInferior);
+        this.add(parteBarraCarga);
         
+    }
+    
+     public void empezarControlador(){
         controladorVistaMain.iniciarContadorVistaMain();
+    }
+    
+    public void cambiarPosicionBarra(int numero){
+        barraCarga.setValue(numero);
     }
     
 }

@@ -16,6 +16,7 @@ import org.json.simple.parser.ParseException;
 public class Logica {
     
     private Conexion con;
+    public static int ID_USUARIO;
     
     public Logica() throws IOException, ParseException{
         con = new Conexion();
@@ -27,6 +28,14 @@ public class Logica {
         if(obj != null) return true;
         return false;
         
+    }
+    
+    public void guardarIdUsuario(int id){
+        this.ID_USUARIO = id;
+    }
+    
+    public int getIdUsuario(){
+        return ID_USUARIO;
     }
 
 }
